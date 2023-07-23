@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobôTech</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabeçalho">
+        <div class="container">
+            <img src="img/LogoGear.svg" class="container__imagem">
+            <h1>RobôTech</h1>
+        </div>
+        <div class="container">
+            <a href="#"> <img src="img/Favoritos2.svg" alt="Meus favoritos" class="container__imagem"></a>
+            <a href="#"> <img src="img/Emprestimos2.svg" alt="Meus empréstimos" class="container__imagem"></a>
+            <a href="#"> <img src="img/Usuario21.svg" alt="Meu perfil" class="container__imagem"></a>
+            <input type="checkbox" id="menu" class="container__botao">
+            <label for="menu">
+                <span class="cabeçalho__menu-hamburguer container__imagem"></span>
+            </label>
+            <ul class="lista-menu">
+                <li class="lista-menu__titulo">Categorias</li>
+                <li class="lista-menu__item">
+                    <a href="placas.html" class="lista-menu__link">Placas</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="motores.html" class="lista-menu__link">Motores</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="circuitos.html" class="lista-menu__link">Circuitos</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="softwares.html" class="lista-menu__link">Softwares</a>
+                </li>
+                <li class="lista-menu__item">
+                    <a href="acessorios.html" class="lista-menu__link">Acessórios</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <br>
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+        <div class="numbertext">0 / 5</div>
+        <img src="0.png" style="width: 100%">
+        <div class="text"></div>
+      </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="1.png" style="width:100%">
+      <div class="text"></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="2.png" style="width:100%">
+      <div class="text"></div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="3.png" style="width:100%">
+      <div class="text"></div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="4.png" style="width:100%">
+        <div class="text"></div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="5.png" style="width:100%">
+        <div class="text"></div>
+      </div>
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  <div class="image-side-div">
+    <img src="pngegg.png" style="width: 400px;" alt="Image description">
+</div>
+<div class="div-line-header ">
+    <p>Loja RobôTech</p>
+</div>
+    <section class="gallery">
+        <!-- Add more gallery items here -->
+    </section>
+    <script>
+        let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+    <footer>
+        <!-- Your footer content goes here -->
+    </footer>
+</body>
+</html>
